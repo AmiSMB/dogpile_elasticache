@@ -7,11 +7,11 @@
 from setuptools import setup, find_packages
 import codecs
 
-version = '0.2.dev0'
+version = '0.2.dev1'
 
 
 def read(filename):
-    return unicode(codecs.open(filename, encoding='utf-8').read())
+    return str(codecs.open(filename, encoding='utf-8').read())
 
 long_description = '\n\n'.join([read('README.rst'), read('CHANGES.rst')])
 
