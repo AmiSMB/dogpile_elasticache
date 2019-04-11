@@ -29,7 +29,7 @@ def get_cluster_info(host, port, timeout=10):
     if len(version_list) != 2 or version_list[0] != b'VERSION':
         raise WrongProtocolData('version', res)
     version = version_list[1]
-    if StrictVersion(str(version)) >= StrictVersion('1.4.14'):
+    if StrictVersion(str(version)) >= StrictVersion('1.5.10'):
         cmd = b'config get cluster\n'
     else:
         cmd = b'get AmazonElastiCache:cluster\n'
